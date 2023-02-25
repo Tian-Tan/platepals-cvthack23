@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,19 +8,92 @@
     <link href="https://fonts.googleapis.com/css?family=Pangolin&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Font+Awesome+5+Free&display=swap" rel="stylesheet" />
-    <link href="./css/main.css" rel="stylesheet" />
     <title>Recipe Recommendations | PlatePals</title>
+    <style>
+        * {
+            margin: 0;
+            font-family: pangolin;
+        }
+
+        body {
+            background-image: url('../static/background.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .title {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        h1 {
+            color: black;
+            font-size: 50px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .card {
+            width: 400px;
+            margin: 50px;
+            padding: 15px;
+            border-style: solid;
+            border-radius: 15px;
+            background-color: rgba(255, 214, 176, 0.5);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        h2 {
+            margin-bottom: 5px;
+        }
+
+        li {
+            margin: 5px;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Recipe Recommendations</h1>
-    <div>
-        <h2>Recipe name</h2>
-        <h3>Ingredients:</h3>
-        <ol>
-            <li>ingredient 1</li>
-            <li>ingredient 2</li>
-            <li>ingredient 3</li>
-        </ol>
+    <div class="title">
+        <h1>Recipe Recommendations</h1>
+    </div>
+    <div class="container">
+        <div class="card">
+            <h2>Recipe name</h2>
+            <h3>Ingredients:</h3>
+            <ol>
+                <li>ingredient</li>
+                <li>ingredient</li>
+                <li>ingredient</li>
+            </ol>
+        </div>
+        <div class="card">
+            <h2>Recipe name</h2>
+            <h3>Ingredients:</h3>
+            <ol>
+                <li>ingredient</li>
+                <li>ingredient</li>
+                <li>ingredient</li>
+            </ol>
+        </div>
+        <div class="card">
+            <h2>Recipe name</h2>
+            <h3>Ingredients:</h3>
+            <ol>
+                <li>ingredient</li>
+                <li>ingredient</li>
+                <li>ingredient</li>
+            </ol>
+        </div>
     </div>
 </body>
+
 </html>
