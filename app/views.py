@@ -53,4 +53,5 @@ def fb_view(request, *args, **kargs):
 def resources_view(request, *args, **kargs):
     pass
 
-print(get_price('apple'))
+def register_view(request, *args, **kargs):
+    return render(request, 'restaurant_regist.html', {})
