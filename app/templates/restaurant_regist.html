@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-image: url('background.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .container h1 {
+            color: black;
+            font-family: sans-serif;
+            margin: 20px;
+        }
+
+        #card {
+            background: rgba(255, 214, 176, 0.7);
+        }
+
+        .registartion-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 600px;
+            font-size: 18px;
+            font-family: sans-serif;
+            padding: 20px;
+
+        }
+
+        .registartion-form input,
+        .registartion-form select,
+        .registartion-form textarea {
+            border: none;
+            padding: 5px;
+            margin-top: 10px;
+            font-family: sans-serif;
+        }
+
+        .registartion-form input:focus,
+        .registartion-form textarea:focus {
+            box-shadow: 3px 3px 10px rgb(228, 228, 228), -3px -3px 10px rgb(224, 224, 224);
+        }
+
+        .registartion-form .submit {
+            width: 100%;
+            padding: 8px 0;
+            font-size: 20px;
+            color: rgb(44, 44, 44);
+            background-color: #ffffff;
+            border-radius: 5px;
+        }
+
+        .registartion-form .submit:hover {
+            box-shadow: 3px 3px 6px rgb(255, 214, 176);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1> Register here</h1>
+        <div id="card">
+            <form name="registration" class="registartion-form">
+                <table>
+                    <tr>
+                        <td><label for="Name">Restaurant Name:</label></td>
+                        <td><input type="text" name="name" id="name"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Location">Restaurant Location:</label></td>
+                        <td><input type="text" name="location" id="location"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="zipcode">Zip Code:</label></td>
+                        <td><input type="number" name="zipcode" id="zipcode"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="name">Contact Person:</label></td>
+                        <td><input type="text" name="person" id="person" placeholder="name"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="name">Contact Number:</label></td>
+                        <td><input type="text" name="number" id="number" placeholder="phone number"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Contact Email:</label></td>
+                        <td><input type="text" name="email" id="email" placeholder="email"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="type">Food Type:</label></td>
+                        <td>
+                            <select name="type" id="type">
+                                <option value="Healthy">Healthy</option>
+                                <option value="Fast Food">Fast Food</option>
+                                <option value="Asian">Asian</option>
+                                <option value="Indian">Indian</option>
+                                <option value="Spanish">Spanish</option>
+                                <option value="Bakery">Bakery</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="available">Days Available:</label></td>
+                        <td><input type="checkbox" name="Monday" value="Monday" />
+                            <label for="Monday">Monday</label>
+                            <input type="checkbox" name="Tuesday" value="Tuesday" />
+                            <label for="Tuesday">Tuesday</label>
+                            <input type="checkbox" name="Wednesday" value="Wednesday" />
+                            <label for="Wednesday">Wednesday</label>
+                            <input type="checkbox" name="Thursday" value="Thursday" />
+                            <label for="Thursday">Thursday</label><br>
+                            <input type="checkbox" name="Friday" value="Monday" />
+                            <label for="Friday">Friday</label>
+                            <input type="checkbox" name="Saturday" value="Saturday" />
+                            <label for="horSaturdayns">Saturday</label>
+                            <input type="checkbox" name="Sunday" value="Sunday" />
+                            <label for="Sunday">Sunday</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="hours">Open Hours</label></td>
+                        <td>
+                            <select name="type" id="type" multiple>
+                                <option value="13:00-14:00">13:00-14:00</option>
+                                <option value="14:00-15:00">14:00-15:00</option>
+                                <option value="15:00-16:00">15:00-16:00</option>
+                                <option value="16:00-17:00">16:00-17:00</option>
+                                <option value="17:00-18:00">17:00-18:00</option>
+                                <option value="18:00-19:00">18:00-19:00</option>
+                                <option value="19:00-20:00">19:00-20:00</option>
+                                <option value="20:00-21:00">20:00-21:00</option>
+                                <option value="21:00-22:00">21:00-22:00</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="about">Additional Information:</label></td>
+                        <td><textarea name="about" id="about" placeholder="What you want us know..."></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" class="submit" value="Register" /></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
