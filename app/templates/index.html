@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PlatePals</title>
+    <title>Home | PlatePals</title>
     <style>
       * {
         margin: 0;
@@ -16,7 +16,7 @@
         align-items: center;
         flex-direction: column;
         height: 100vh;
-        background-image: url("images/background.png");
+        background-image: url("static/background.jpg");
         background-attachment: fixed;
         background-size: cover;
       }
@@ -75,7 +75,7 @@
   </head>
   <body>
     <div class="container">
-      <img class="logo" src="images/logo.png" alt="logo" />
+      <img class="logo" src="static/logo.png" alt="logo" />
       <h1>
         Under a budget for food? No problem. We can recommend you a recipe!
       </h1>
@@ -92,7 +92,7 @@
       <div class="sidebar">
         <ul>
           <li>
-            <a href="#"><button class="btn">Home</button></a>
+            <a href="{% url 'home' %}"><button class="btn">Home</button></a>
           </li>
           <li>
             <a href="#"><button class="btn">Food Banks</button></a>
