@@ -53,10 +53,35 @@
 
         h2 {
             margin-bottom: 5px;
+            font-size: 30px;
         }
 
         li {
             margin: 5px;
+        }
+
+        button {
+            border: solid;
+            color: black;
+            padding: 16px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 20px;
+            margin: 20px;
+            cursor: pointer;
+            background-color: rgb(221, 173, 128);
+            border-radius: 12px;
+        }
+
+        button:hover {
+            background-color: rgb(213, 105, 4);
+        }
+
+        .button {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
@@ -93,6 +118,9 @@
                 <li>ingredient</li>
             </ol>
         </div>
+    </div>
+    <div class="button">
+        <a href=""><button type="button">Get Another Recipe</button></a>
     </div>
 </body>
 
