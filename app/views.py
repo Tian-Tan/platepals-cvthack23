@@ -48,7 +48,7 @@ def home_view(request, *args, **kargs):
     return render(request, 'index.html', {})
 
 def recipe_view(request, *args, **kargs):
-    pass
+    return render(request, 'recipe_list.html', {})
 
 def fb_view(request, *args, **kargs):
     pass
