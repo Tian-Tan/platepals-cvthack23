@@ -82,7 +82,8 @@
     <div class="container">
         <h1> Register here</h1>
         <div id="card">
-            <form name="registration" class="registartion-form">
+            <form action="app/templates/register_succss.html" method="get" target="_blank" name="registration"
+                class="registartion-form">
                 <table>
                     <tr>
                         <td><label for="Name">Restaurant Name:</label></td>
@@ -162,8 +163,7 @@
                         <td><textarea name="about" id="about" placeholder="What you want us know..."></textarea></td>
                     </tr>
                     <tr>
-                        <td colspan="2"><input type="submit" class="submit" value="Register"
-                                onclick=""{% url 'reg_success' %}"" /></td>
+                        <td colspan="2"><input type="submit" class="submit" value="Register" /></td>
                     </tr>
                 </table>
             </form>
