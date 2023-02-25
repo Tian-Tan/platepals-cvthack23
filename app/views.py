@@ -55,3 +55,6 @@ def resources_view(request, *args, **kargs):
 
 def register_view(request, *args, **kargs):
     return render(request, 'restaurant_regist.html', {})
+
+def reg_success_view(request, *args, **kargs):
+    return render(request, 'register_success.html', {})
