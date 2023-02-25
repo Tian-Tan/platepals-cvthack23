@@ -1,16 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Pangolin&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Font+Awesome+5+Free&display=swap" rel="stylesheet" />
-    <link href="./css/main.css" rel="stylesheet" />
-    <title>Home | PlatePals</title>
-</head>
-<body>
-    <h1>Home Page</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PlatePals</title>
+    <style>
+      * {
+        margin: 0;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        background-image: url("images/background.png");
+        background-attachment: fixed;
+        background-size: cover;
+      }
+
+      .container h1 {
+        color: black;
+        font-family: sans-serif;
+        margin: 20px;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      h1 {
+        color: green;
+      }
+
+      .btn {
+        cursor: pointer;
+        border: 1px solid #000000;
+        background-color: transparent;
+        height: 20px;
+        width: 120px;
+        color: #000000;
+        font-size: 1em;
+        box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+      }
+
+      .logo {
+        width: 100px;
+        height: 100px;
+        top: 0;
+        left: 0;
+      }
+
+      .bank-btn {
+        margin-top: 2vw;
+        background-color: transparent;
+        border: 2px solid black;
+        width: 15vw;
+        height: 3vw;
+        font-size: 1.5vw;
+        color: #000000;
+        border-radius: 0.5vw;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .bank-btn i {
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img class="logo" src="images/logo.png" alt="logo" />
+      <h1>
+        Under a budget for food? No problem. We can recommend you a recipe!
+      </h1>
+      <form>
+        <div class="inner-form">
+          <div class="input-field first-wrap">
+            <input id="search" type="text" placeholder="What is your budget?" />
+          </div>
+          <div class="input-field second-wrap">
+            <button class="btn-search" type="button">Search</button>
+          </div>
+        </div>
+      </form>
+      <div class="sidebar">
+        <ul>
+          <li>
+            <a href="#"><button class="btn">Home</button></a>
+          </li>
+          <li>
+            <a href="#"><button class="btn">Food Banks</button></a>
+          </li>
+          <li>
+            <a href="#"><button class="btn">Resources</button></a>
+          </li>
+          <li>
+            <a href="#"><button class="btn">Feed the Need</button></a>
+          </li>
+        </ul>
+      </div>
+      <h2>No budget? We can find you a food bank!</h2>
+      <button class="bank-btn">&nbsp;&nbsp;&nbsp;></button>
+    </div>
+  </body>
 </html>
