@@ -47,6 +47,9 @@ def get_price(ingredient):
 def home_view(request, *args, **kargs):
     return render(request, 'index.html', {})
 
+def recipe_view(request, *args, **kargs):
+    pass
+
 def fb_view(request, *args, **kargs):
     pass
 

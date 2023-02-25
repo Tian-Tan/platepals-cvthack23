@@ -23,5 +23,5 @@ urlpatterns = [
     path('', home_view, name='home'),
     path('home/', home_view, name='home'),
     path('register/', register_view, name='register'),
-    path('register/success', reg_success_view, name='reg_success')
+    path('success/', reg_success_view, name='reg_success')
 ]
