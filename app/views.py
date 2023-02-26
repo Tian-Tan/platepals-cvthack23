@@ -105,7 +105,7 @@ def about_view(request, *args, **kargs):
     return render(request, 'about.html', {})
 
 def resources_view(request, *args, **kargs):
-    pass
+    return render(request, 'resources.html', {})
 
 def ftn_view(request, *args, **kargs):
     return render(request, 'ftn_home.html', {})

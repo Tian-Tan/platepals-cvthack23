@@ -16,7 +16,8 @@
       href="https://fonts.googleapis.com/css?family=Font+Awesome+5+Free&display=swap"
       rel="stylesheet"
     />
-    <title>Resources</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Resources | PlatePals</title>
     <style>
       * {
         margin: 0;
@@ -26,36 +27,118 @@
         background-image: url("../static/background.jpg");
         background-attachment: fixed;
         background-size: cover;
+        margin: 25px
       }
 
-      h1 {
+      /*h1 {
         margin-top: 40px;
         font-size: 50px;
         color: #080808;
         text-align: center;
+      }*/
+
+      nav {
+      padding: 0px;
+      position: fixed;
+      top: 0px;
+      width: 100%;
+      z-index: 2;
+    }
+
+      h1 {
+      text-align: center;
+          font-size:30px; font-weight:300; color:#222; letter-spacing:1px;
+          text-transform: uppercase;
+
+          display: grid;
+          grid-template-columns: 1fr max-content 1fr;
+          grid-template-rows: 27px 0;
+          grid-gap: 20px;
+          align-items: center;
       }
+
+      h1:after, h1:before {
+          content: " ";
+          display: block;
+          border-bottom: 1px solid #c50000;
+          border-top: 1px solid #c50000;
+          height: 5px;
+        background-color:#f8f8f8;
+      }
+
+      p { color: #333333; 
+        
+        font-size: 16px; 
+        font-weight: 300; 
+        line-height: 1.5625; 
+        margin-bottom: 15px; 
+      }
+
+     .tab {
+        margin-left: 50px
+      }
+
+      h2:hover {
+        color: rgb(94, 94, 94);
+      }
+
+
+
     </style>
   </head>
   <body>
-    <h1>Resources</h1>
-    <h2>
+    <nav
+    class="relative flex w-full flex-wrap items-center justify-between bg-neutral-900 py-3 text-neutral-200 shadow-lg lg:flex-wrap lg:justify-start"
+    data-te-navbar-ref>
+    <div class="flex w-full flex-wrap items-center justify-between px-6">
+      <div class="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
+        id="navbarSupportedContent4" data-te-collapse-item>
+        <a class="pr-2 text-xl font-semibold text-white" href="{% url 'home' %}">Home</a>
+        <!-- Left links -->
+        <ul class="list-style-none mr-auto flex flex-col pl-0 lg:flex-row" data-te-navbar-nav-ref>
+          <li class="p-2" data-te-nav-item-ref>
+            <a class="text-white disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+              href="{% url 'foodbank' %}" data-te-nav-link-ref>Food Bank Finder</a>
+          </li>
+          <li class="p-2" data-te-nav-item-ref>
+            <a class="p-0 text-white opacity-60 hover:opacity-80 focus:opacity-80 disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+              href="{% url 'resources' %}" data-te-nav-link-ref>Resources</a>
+          </li>
+          <li class="p-2" data-te-nav-item-ref>
+            <a class="p-0 text-white opacity-60 hover:opacity-80 focus:opacity-80 disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+              href="{% url 'ftn' %}" data-te-nav-link-ref>Feed the Need</a>
+          </li>
+          <li class="p-2" data-te-nav-item-ref>
+            <a class="p-0 text-white opacity-60 hover:opacity-80 focus:opacity-80 disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+              href="{% url 'about' %}" data-te-nav-link-ref>About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <br>
+    <br>
+    <h1 style="font-size: 40px; padding-bottom: 0px;">Resources</h1>
+    <br>
+    <br>
+    <h2 style="font-size: 30px;">
       <a href="https://www.gbfb.org/what-we-do/our-programs/snap/">
         Supplemental Nutrition Assistance Program (SNAP)</a
       >
     </h2>
-    <p>
+    <p style="font-size: 20px; margin: 5px">
       GBFB offers assistance with applications for the Supplemental Nutrition
       Assistance Program (SNAP), formerly known as food stamps. SNAP benefits
       are put on an electronic card that is used like an ATM or bank card, and
       can be used at most supermarkets, convenience stores, and some farmers’
       markets.
     </p>
-    <h2>
+    <h2 style="font-size: 30px;">
       <a href="https://bostonfoodaccesscouncil.org/">
         Boston Food Access Council (BFAC)</a
       >
     </h2>
-    <p>
+    <p style="font-size: 20px; margin: 5px">
       The Boston Food Access Council (BFAC) brings community and stakeholder
       voices together to create access to affordable, just, culturally
       connected, healthy, and sustainable food in Boston. The work of the BFAC
@@ -64,12 +147,12 @@
       food wasted in homes and restaurants, and supporting local food producers
       and food businesses.
     </p>
-    <h2>
+    <h2 style="font-size: 30px;">
       <a href="https://www.mass.gov/orgs/department-of-transitional-assistance"
         >The Massachusetts Department of Transitional Assistance (DTA)</a
       >
     </h2>
-    <p>
+    <p style="font-size: 20px; margin: 5px">
       The Department of Transitional Assistance (DTA) assists and empowers
       low-income individuals and families to meet their basic needs, improve
       their quality of life, and achieve long term economic self-sufficiency.
@@ -77,12 +160,12 @@
       assistance (cash benefits) and food assistance (SNAP benefits), as well as
       workforce training opportunities.
     </p>
-    <h2>
+    <h2 style="font-size: 30px;">
       <a href="https://mahomeless.org/"
         >The Massachusetts Coalition for the Homeless (MCH)</a
       >
     </h2>
-    <p>
+    <p style="font-size: 20px; margin: 5px">
       Created in 1981, the Coalition embraces a collaborative approach to unify
       people and mobilize resources to support its mission. The Coalition has
       been committed to tackling difficult problems that impact families and
@@ -94,12 +177,12 @@
       committed to developing programs that meet an unmet need, which in turn
       leads to long-term solutions to poverty and homelessness.
     </p>
-    <h2>
+    <h2 style="font-size: 30px;">
       <a href="https://www.mass.gov/wic-information-for-participants"
         >Women, Infants, & Children Nutrition Program (WIC)</a
       >
     </h2>
-    <p>
+    <p style="font-size: 20px; margin: 5px">
       The Special Supplemental Nutrition Program for Women, Infants, and
       Children - better known as the WIC program - serves to safeguard the
       health of low-income pregnant, postpartum, and breastfeeding women,

@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from app.views import home_view, register_view, reg_success_view, recipe_view, fb_view, ftn_view, restaurants_view, about_view
+from app.views import home_view, register_view, reg_success_view, recipe_view, fb_view, ftn_view, restaurants_view, about_view, resources_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,5 +28,6 @@ urlpatterns = [
     path('foodbank/', fb_view, name='foodbank'),
     path('ftn/', ftn_view, name='ftn'),
     path('view/', restaurants_view, name='ftn-view'),
-    path('about/', about_view, name='about')
+    path('about/', about_view, name='about'),
+    path('resources/', resources_view, name='resources')
 ]
