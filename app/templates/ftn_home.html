@@ -130,7 +130,7 @@
           </li>
           <li class="p-2" data-te-nav-item-ref>
             <a class="p-0 text-white opacity-60 hover:opacity-80 focus:opacity-80 disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
-              href="#" data-te-nav-link-ref>About</a>
+              href="{% url 'about' %}" data-te-nav-link-ref>About</a>
           </li>
         </ul>
       </div>
@@ -146,7 +146,7 @@
       </h2>
       <div class="button-container">
         <a href="{% url 'register' %}"><button class="button left-button">I want to feed</button></a>
-        <a><button class="button right-button">I am in need</button></a>
+        <a href="{% url 'ftn-view' %}"><button class="button right-button">I am in need</button></a>
       </div>
     </div>
   </div>

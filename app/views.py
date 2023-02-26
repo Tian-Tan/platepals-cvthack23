@@ -101,6 +101,9 @@ def recipe_view(request, *args, **kargs):
 def fb_view(request, *args, **kargs):
     return render(request, 'foodbank.html', {})
 
+def about_view(request, *args, **kargs):
+    return render(request, 'about.html', {})
+
 def resources_view(request, *args, **kargs):
     pass
 
@@ -113,4 +116,5 @@ def register_view(request, *args, **kargs):
 def reg_success_view(request, *args, **kargs):
     return render(request, 'register_success.html', {})
 
-print(random_food_list(20))
+def restaurants_view(request, *args, **kargs):
+    return render(request, 'view_restaurants.html', {})

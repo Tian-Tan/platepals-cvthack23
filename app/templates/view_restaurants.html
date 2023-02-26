@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Pangolin&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Font+Awesome+5+Free&display=swap" rel="stylesheet" />
-    <title>Recipe Recommendations | PlatePals</title>
+    <title>View Restaurants | PlatePals</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         * {
@@ -146,66 +146,44 @@
       </div>
     </div>
   </nav>
-    <h1 style="font-size: 50px; text-align: center;">Your budget is ${{ budget }}</h1>
-    <h2 style="font-size: 25px; text-align: center;">Let us recommend some healthy ingredients:</h2>
-    <div style="font-size: 20px; text-align: center;">
-        <ol style="list-style-type: none; display: inline-block;">
-            <li style="text-decoration: underline;">Ingredient</li>
-            {% for food in food_list %}
-            <li>{{ food }}</li>
-            {% endfor %}
-        </ol>
-     
-        <ul style="list-style-type: none; display: inline-block;">
-            <li style="text-decoration: underline;">Price</li>
-           {% for price in price_list %}
-           <li>${{ price }}</li>
-           {% endfor %}
-        </ul>
-    </div>
+    
     <div class="title">
-        <h1 style="font-size: 50px; text-decoration: underline;">Recipe Recommendations</h1>
+        <h1 style="font-size: 50px; text-decoration: underline;">They provide free food for the need</h1>
     </div>
     <div class="container">
         <div class="card button2">
-            <h2 style="font-size: 25px;">{{ 1_name }}</h2>
-            <img src="{{ 1_image }}"
-                width="90%" />
-            <h3>Ingredients:</h3>
+            <h2 style="font-size: 25px;">Restaurant 1</h2>
+            <img src="https://patch.com/img/cdn/users/39159/2011/09/raw/15673aa8d1772759f8ca407a6af5a6dd.jpg"
+                width="90%" height="200px"/>
+            <h3>Information:</h3>
             <ol>
-                {% for i in 1_ingredients %}
-                <li>{{ i }}</li>
-                {% endfor %}
+                <li>Location: 123 Bay State Road</li>
+                <li>Days: Monday, Wednesday, Friday</li>
+                <li>Time: 10:00pm-11:00pm</li>
             </ol>
-            <a href="{{ 1_info }}"><button type="button">More Info</button></a>
         </div>
         <div class="card button2">
-            <h2 style="font-size: 25px;">{{ 2_name }}</h2>
-            <img src="{{ 2_image }}" width="90%"
+            <h2 style="font-size: 25px;">Restaurant 2</h2>
+            <img src="https://www.cheapfoodhere.com/wp-content/uploads/2012/06/Cheap-restaurant-st-pete-trips-diner-1.jpg" width="90%" height="200px"
                  />
-            <h3>Ingredients:</h3>
+            <h3>Information:</h3>
             <ol>
-                {% for i in 2_ingredients %}
-                <li>{{ i }}</li>
-                {% endfor %}
+                <li>Location: 69 Beacon Street</li>
+                <li>Days: Thursday, Friday</li>
+                <li>Time: 4:00pm-5:00pm</li>
             </ol>
-            <a href="{{ 2_info }}"><button type="button">More Info</button></a>
         </div>
         <div class="card button2">
-            <h2 style="font-size: 25px;">{{ 3_name }}</h2>
-            <img src="{{ 3_image }}" width="90%"
-                 />
-            <h3>Ingredients:</h3>
+            <h2 style="font-size: 25px;">Restaurant 3</h2>
+            <img src="https://2.bp.blogspot.com/-uRQfHt50PLM/WWqJHYLwzGI/AAAAAAAAp2I/R4G6lUATfgcdt6rGcmlU_NYrZkGpI-C6gCEwYBhgL/s1600/IMG_4919.JPG" width="90%"
+            height="200px"/>
+            <h3>Information:</h3>
             <ol>
-                {% for i in 3_ingredients %}
-                <li>{{ i }}</li>
-                {% endfor %}
+                <li>Location: 5 Commonwealth Avenue</li>
+                <li>Days: Everyday</li>
+                <li>Time: 8:00pm-9:00pm</li>
             </ol>
-            <a href="{{ 3_info }}"><button type="button">More Info</button></a>
         </div>
-    </div>
-    <div class="button">
-        <button onClick="window.location.reload();">I want a different recommendation</button>
     </div>
 </body>
 
