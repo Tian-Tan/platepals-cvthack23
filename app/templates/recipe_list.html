@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Font+Awesome+5+Free&display=swap" rel="stylesheet" />
     <title>Recipe Recommendations | PlatePals</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         * {
             margin: 0;
@@ -46,7 +47,7 @@
             padding: 15px;
             border-style: solid;
             border-radius: 15px;
-            background-color: rgba(255, 214, 176, 0.5);
+            background-color: rgba(255, 214, 176, 0.7);
             background-repeat: no-repeat;
             background-size: cover;
         }
@@ -59,6 +60,14 @@
         li {
             margin: 5px;
         }
+
+        nav {
+      padding: 0px;
+      position: fixed;
+      top: 0px;
+      width: 100%;
+      z-index: 2;
+    }
 
         .button button {
             border: solid;
@@ -108,29 +117,58 @@
 </head>
 
 <body>
-    <h1>Your budget is ${{ budget }}</h1>
-    <h2>Let us recommend some healthy ingredients:</h2>
-    <span>
+    <nav
+    class="relative flex w-full flex-wrap items-center justify-between bg-neutral-900 py-3 text-neutral-200 shadow-lg lg:flex-wrap lg:justify-start"
+    data-te-navbar-ref>
+    <div class="flex w-full flex-wrap items-center justify-between px-6">
+      <div class="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
+        id="navbarSupportedContent4" data-te-collapse-item>
+        <a class="pr-2 text-xl font-semibold text-white" href="{% url 'home' %}">Home</a>
+        <!-- Left links -->
+        <ul class="list-style-none mr-auto flex flex-col pl-0 lg:flex-row" data-te-navbar-nav-ref>
+          <li class="p-2" data-te-nav-item-ref>
+            <a class="text-white disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+              href="{% url 'foodbank' %}" data-te-nav-link-ref>Food Bank Finder</a>
+          </li>
+          <li class="p-2" data-te-nav-item-ref>
+            <a class="p-0 text-white opacity-60 hover:opacity-80 focus:opacity-80 disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+              href="#" data-te-nav-link-ref>Resources</a>
+          </li>
+          <li class="p-2" data-te-nav-item-ref>
+            <a class="p-0 text-white opacity-60 hover:opacity-80 focus:opacity-80 disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+              href="{% url 'ftn' %}" data-te-nav-link-ref>Feed the Need</a>
+          </li>
+          <li class="p-2" data-te-nav-item-ref>
+            <a class="p-0 text-white opacity-60 hover:opacity-80 focus:opacity-80 disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+              href="#" data-te-nav-link-ref>About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <h1 style="font-size: 50px; text-align: center;">Your budget is ${{ budget }}</h1>
+    <h2 style="font-size: 25px; text-align: center;">Let us recommend some healthy ingredients:</h2>
+    <div style="font-size: 20px; text-align: center;">
         <ol style="list-style-type: none; display: inline-block;">
-            <li>Ingredient</li>
+            <li style="text-decoration: underline;">Ingredient</li>
             {% for food in food_list %}
             <li>{{ food }}</li>
             {% endfor %}
         </ol>
      
         <ul style="list-style-type: none; display: inline-block;">
-            <li>Price</li>
+            <li style="text-decoration: underline;">Price</li>
            {% for price in price_list %}
            <li>${{ price }}</li>
            {% endfor %}
         </ul>
-    <span>
+    </div>
     <div class="title">
-        <h1>Recipe Recommendations</h1>
+        <h1 style="font-size: 50px; text-decoration: underline;">Recipe Recommendations</h1>
     </div>
     <div class="container">
         <div class="card button2">
-            <h2>{{ 1_name }}</h2>
+            <h2 style="font-size: 25px;">{{ 1_name }}</h2>
             <img src="{{ 1_image }}"
                 width="90%" />
             <h3>Ingredients:</h3>
@@ -142,7 +180,7 @@
             <a href="{{ 1_info }}"><button type="button">More Info</button></a>
         </div>
         <div class="card button2">
-            <h2>{{ 2_name }}</h2>
+            <h2 style="font-size: 25px;">{{ 2_name }}</h2>
             <img src="{{ 2_image }}" width="90%"
                  />
             <h3>Ingredients:</h3>
@@ -154,7 +192,7 @@
             <a href="{{ 2_info }}"><button type="button">More Info</button></a>
         </div>
         <div class="card button2">
-            <h2>{{ 3_name }}</h2>
+            <h2 style="font-size: 25px;">{{ 3_name }}</h2>
             <img src="{{ 3_image }}" width="90%"
                  />
             <h3>Ingredients:</h3>

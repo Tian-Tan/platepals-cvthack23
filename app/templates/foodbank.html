@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Font+Awesome+5+Free&display=swap" rel="stylesheet" />
     <title>Food Bank Search | PlatePals</title>
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         * {
             margin: 0;
@@ -24,6 +24,14 @@
             font-size: 50px;
             color: #080808;
             text-align: center;
+        }
+
+        nav {
+            padding: 0px;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            z-index: 2;
         }
 
         .container {
@@ -44,14 +52,47 @@
 
         .link {
             text-align: center;
+            
+        }
+
+        .link:hover {
+            color: rgb(63, 63, 63);
         }
     </style>
 
 </head>
 
 <body>
+    <nav
+    class="relative flex w-full flex-wrap items-center justify-between bg-neutral-900 py-3 text-neutral-200 shadow-lg lg:flex-wrap lg:justify-start"
+    data-te-navbar-ref>
+    <div class="flex w-full flex-wrap items-center justify-between px-6">
+      <div class="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
+        id="navbarSupportedContent4" data-te-collapse-item>
+        <a class="pr-2 text-xl font-semibold text-white" href="{% url 'home' %}">Home</a>
+        <!-- Left links -->
+        <ul class="list-style-none mr-auto flex flex-col pl-0 lg:flex-row" data-te-navbar-nav-ref>
+          <li class="p-2" data-te-nav-item-ref>
+            <a class="text-white disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+              href="{% url 'foodbank' %}" data-te-nav-link-ref>Food Bank Finder</a>
+          </li>
+          <li class="p-2" data-te-nav-item-ref>
+            <a class="p-0 text-white opacity-60 hover:opacity-80 focus:opacity-80 disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+              href="#" data-te-nav-link-ref>Resources</a>
+          </li>
+          <li class="p-2" data-te-nav-item-ref>
+            <a class="p-0 text-white opacity-60 hover:opacity-80 focus:opacity-80 disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+              href="{% url 'ftn' %}" data-te-nav-link-ref>Feed the Need</a>
+          </li>
+          <li class="p-2" data-te-nav-item-ref>
+            <a class="p-0 text-white opacity-60 hover:opacity-80 focus:opacity-80 disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+              href="#" data-te-nav-link-ref>About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
     <br>
-    <h1>Check the food bank around you</h1>
     <div class="link">
         <a href="https://www.gbfb.org/need-food/">
             <p>This microservice is provided by Greater Boston Food Bank</p>
