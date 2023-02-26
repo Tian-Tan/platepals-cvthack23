@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Exo+2|Yatra+One");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Exo 2", sans-serif;
+      }
+
+      body {
+        background-image: url("../static/background.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+      }
+
+      .wrapper {
+        margin-top: 60px;
+        text-align: center;
+      }
+
+      .wrapper h1 {
+        font-family: "Yatra One", cursive;
+        font-size: 48px;
+        color: #000000;
+        margin-bottom: 25px;
+      }
+
+      .our_team {
+        width: auto;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .our_team .team_member {
+        width: 250px;
+        margin: 5px;
+        background: #fff;
+        padding: 20px 10px;
+      }
+
+      .our_team .team_member .member_img {
+        background: #e9e5fa;
+        max-width: 190px;
+        width: 100%;
+        height: 190px;
+        margin: 0 auto;
+        border-radius: 50%;
+        padding: 5px;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .our_team .team_member .member_img img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .our_team .team_member h3 {
+        text-transform: uppercase;
+        font-size: 18px;
+        line-height: 18px;
+        letter-spacing: 2px;
+        margin: 15px 0 0px;
+      }
+
+      .our_team .team_member span {
+        font-size: 10px;
+      }
+
+      .our_team .team_member p {
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .our_team .team_member .member_img .social_media {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        background: rgba(0, 0, 0, 0.65);
+        width: 95%;
+        height: 95%;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(0);
+        transition: all 0.5s ease;
+      }
+
+      .our_team .team_member .member_img .social_media .item {
+        margin: 0 10px;
+      }
+
+      .our_team .team_member .member_img .social_media .fab {
+        color: #8c7ae6;
+        font-size: 20px;
+      }
+
+      .our_team .team_member .member_img:hover .social_media {
+        transform: scale(1);
+      }
+    </style>
+  </head>
+  <body>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
+
+    <div class="wrapper">
+      <h1>Our Team</h1>
+      <div class="our_team">
+        <div class="team_member">
+          <div class="member_img">
+            <img src="../static/quang_photo.png" alt="our_team" />
+            <div class="social_media">
+              <div class="github item">
+                <a href="https://github.com/thisisnguyennhatquang"
+                  ><i class="fab fa-github"></i>
+                </a>
+              </div>
+              <div class="linkedin item">
+                <a href="https://www.linkedin.com/in/quang-nguyen-07b807205/"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <h3>Quang</h3>
+          <span>FrontEnd Developer, UI/UX Designer</span>
+          <p>
+            Hi, my name is Quang. I am currently a sophomore majoring in
+            Computer Science at Boston University. When I am not working on my
+            assignments or expanding my programming toolkit, I tend to spend my
+            free time reading, playing guitar, or playing a pick-up soccer game
+            with my friends. Looking forward to meeting you all!
+          </p>
+        </div>
+        <div class="team_member">
+          <div class="member_img">
+            <img src="../static/talia_photo.jpg" alt="our_team" />
+            <div class="social_media">
+              <div class="github item">
+                <a href="https://github.com/ttaliacc"
+                  ><i class="fab fa-github"></i>
+                </a>
+              </div>
+              <div class="linkedin item">
+                <a href="https://www.linkedin.com/in/qixuanchen/"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <h3>Talia</h3>
+          <span>FrontEnd Developer</span>
+          <p>Talia's Introduction.</p>
+        </div>
+        <div class="team_member">
+          <div class="member_img">
+            <img src="../static/adam_photo.jpg" alt="our_team" />
+            <div class="social_media">
+              <div class="github item">
+                <a href="https://github.com/Tian-Tan"
+                  ><i class="fab fa-github"></i>
+                </a>
+              </div>
+              <div class="linkedin item">
+                <a href="https://www.linkedin.com/in/tianherng-tan/"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <h3>Adam</h3>
+          <span>Project Manager, FullStack Developer</span>
+          <p>Adam's Introduction.</p>
+        </div>
+        <div class="team_member">
+          <div class="member_img">
+            <img src="../static/david_photo.png" alt="our_team" />
+            <div class="social_media">
+              <div class="github item">
+                <a href="https://github.com/pumpkinperson996"
+                  ><i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <h3>Shuwei</h3>
+          <span>Designer, FrontEnd Developer</span>
+          <p>
+            Hi! This is Shuwei. I'm glad to join this hackathon with my great
+            teammates. I wish we could build more fun stuff in the future,
+            cheers!
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
