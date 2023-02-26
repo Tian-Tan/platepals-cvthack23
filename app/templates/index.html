@@ -72,6 +72,7 @@
       border-radius: 0.5vw;
       font-weight: bold;
       cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
     }
 
     .bank button i {
@@ -108,9 +109,14 @@
       border-left: none;
       /* Prevent double borders */
       cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
     }
 
     form.search button:hover {
+      background: rgb(213, 105, 4);
+    }
+
+    button:hover {
       background: rgb(213, 105, 4);
     }
 
@@ -143,7 +149,7 @@
           </li>
           <li class="p-2" data-te-nav-item-ref>
             <a class="p-0 text-white opacity-60 hover:opacity-80 focus:opacity-80 disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
-              href="{% url 'register' %}" data-te-nav-link-ref>Feed the Need</a>
+              href="{% url 'ftn' %}" data-te-nav-link-ref>Feed the Need</a>
           </li>
           <li class="p-2" data-te-nav-item-ref>
             <a class="p-0 text-white opacity-60 hover:opacity-80 focus:opacity-80 disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
@@ -175,7 +181,7 @@
     </div>
     <div class="bank">
       <h3>Need more help? We can find you a food bank around Boston!</h2>
-        <button>-----></button>
+        <a href="{% url 'foodbank' %}"><button>-----></button></a>
     </div>
   </div>
 </body>

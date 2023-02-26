@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Pangolin&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Font+Awesome+5+Free&display=swap" rel="stylesheet" />
-  <title>Home | PlatePals</title>
+  <title>Feed the Need | PlatePals</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     * {
@@ -19,6 +19,7 @@
 
     .container {
       display: flex;
+      margin-top: 100px;
       justify-content: flex-start;
       align-items: center;
       flex-direction: column;
@@ -65,20 +66,43 @@
       z-index: 2;
     }
 
-    button {
-      float: center;
-      width: 300px;
-      margin-left: 20px;
-      margin-right: 20px;
-      padding: 100px;
-      background: rgb(221, 173, 128);
-      color: white;
-      font-size: 17px;
-      border: 1px solid grey;
-      border-left: none;
-      /* Prevent double borders */
-      cursor: pointer;
-    }
+    .button-container {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.button-container .button {
+  display: block;
+  width: 200px;
+  height: 80px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 80px;
+  border-radius: 40px;
+  color: #fff;
+  border: 1px solid #000;
+  background-color: rgb(221, 173, 128);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.left-button {
+  float: left;
+  margin-right: 50px;
+}
+
+.right-button {
+  float: right;
+  margin-left: 50px;
+}
+
+.button:hover {
+  background-color: rgb(213, 105, 4);
+}
+
   </style>
 </head>
 
@@ -118,11 +142,12 @@
     <h1>PLATEPALS</h1>
     <div>
       <h2>
-        Feed the Need program
+        Our Feed the Need program connects local restaurants who are willing to donate leftover food to families in need
       </h2>
-
-      <button type="submit" value="success">I wish to feed</button>
-      <button type="submit" value="success">I am in need</button>
+      <div class="button-container">
+        <a href="{% url 'register' %}"><button class="button left-button">I want to feed</button></a>
+        <a><button class="button right-button">I am in need</button></a>
+      </div>
     </div>
   </div>
 </body>

@@ -104,6 +104,9 @@ def fb_view(request, *args, **kargs):
 def resources_view(request, *args, **kargs):
     pass
 
+def ftn_view(request, *args, **kargs):
+    return render(request, 'ftn_home.html', {})
+
 def register_view(request, *args, **kargs):
     return render(request, 'restaurant_regist.html', {})
 
