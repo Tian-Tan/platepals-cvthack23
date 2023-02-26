@@ -68,7 +68,7 @@ def home_view(request, *args, **kargs):
         for i in range(3):
             foods.append(random.choice(food_price_list[0]))
         data = get_data(foods)
-        while len(data) < 3:
+        while len(data['hits']) < 3:
             food_price_list = random_food_list(int(budget))
             foods = []
             for i in range(3):
