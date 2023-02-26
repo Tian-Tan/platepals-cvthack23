@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us</title>
+    <title>About Us | PlatePal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
       @import url("https://fonts.googleapis.com/css?family=Exo+2|Yatra+One");
 
@@ -20,6 +21,14 @@
         background-attachment: fixed;
         background-size: cover;
       }
+
+      nav {
+      padding: 0px;
+      position: fixed;
+      top: 0px;
+      width: 100%;
+      z-index: 2;
+    }
 
       .wrapper {
         margin-top: 60px;
@@ -112,6 +121,35 @@
     </style>
   </head>
   <body>
+    <nav
+    class="relative flex w-full flex-wrap items-center justify-between bg-neutral-900 py-3 text-neutral-200 shadow-lg lg:flex-wrap lg:justify-start"
+    data-te-navbar-ref>
+    <div class="flex w-full flex-wrap items-center justify-between px-6">
+      <div class="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
+        id="navbarSupportedContent4" data-te-collapse-item>
+        <a class="pr-2 text-xl font-semibold text-white" href="{% url 'home' %}">Home</a>
+        <!-- Left links -->
+        <ul class="list-style-none mr-auto flex flex-col pl-0 lg:flex-row" data-te-navbar-nav-ref>
+          <li class="p-2" data-te-nav-item-ref>
+            <a class="text-white disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+              href="{% url 'foodbank' %}" data-te-nav-link-ref>Food Bank Finder</a>
+          </li>
+          <li class="p-2" data-te-nav-item-ref>
+            <a class="p-0 text-white opacity-60 hover:opacity-80 focus:opacity-80 disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+              href="#" data-te-nav-link-ref>Resources</a>
+          </li>
+          <li class="p-2" data-te-nav-item-ref>
+            <a class="p-0 text-white opacity-60 hover:opacity-80 focus:opacity-80 disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+              href="{% url 'ftn' %}" data-te-nav-link-ref>Feed the Need</a>
+          </li>
+          <li class="p-2" data-te-nav-item-ref>
+            <a class="p-0 text-white opacity-60 hover:opacity-80 focus:opacity-80 disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+              href="{% url 'about' %}" data-te-nav-link-ref>About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
