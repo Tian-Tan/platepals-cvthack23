@@ -106,45 +106,63 @@
 </head>
 
 <body>
+    <h1>Your budget is ${{ budget }}</h1>
+    <h2>Let us recommend some healthy ingredients:</h2>
+    <span>
+        <ol style="list-style-type: none; display: inline-block;">
+            <li>Ingredient</li>
+            {% for food in food_list %}
+            <li>{{ food }}</li>
+            {% endfor %}
+        </ol>
+     
+        <ul style="list-style-type: none; display: inline-block;">
+            <li>Price</li>
+           {% for price in price_list %}
+           <li>${{ price }}</li>
+           {% endfor %}
+        </ul>
+    <span>
     <div class="title">
         <h1>Recipe Recommendations</h1>
     </div>
     <div class="container">
         <div class="card button2">
-            <h2>Recipe name</h2>
-            <img src="https://images.all-free-download.com/images/graphicwebp/cat_cats_eyes_cat_face_269574.webp"
-                width="90%" alt="Photo of White Beach in Boracay, Philippines" />
+            <h2>{{ 1_name }}</h2>
+            <img src="{{ 1_image }}"
+                width="90%" />
             <h3>Ingredients:</h3>
             <ol>
-                <li>ingredient</li>
-                <li>ingredient</li>
-                <li>ingredient</li>
+                {% for i in 1_ingredients %}
+                <li>{{ i }}</li>
+                {% endfor %}
             </ol>
-            <a href=""><button type="button">More Info</button></a>
+            <a href="{{ 1_info }}"><button type="button">More Info</button></a>
         </div>
         <div class="card button2">
-            <h2>Recipe name</h2>
-            <img src="//www.html.am/images/html-codes/links/boracay-white-beach-sunset-300x225.jpg" width="90%"
-                alt="Photo of White Beach in Boracay, Philippines" />
+            <h2>{{ 2_name }}</h2>
+            <img src="{{ 2_image }}" width="90%"
+                 />
             <h3>Ingredients:</h3>
             <ol>
-                <li>ingredient</li>
-                <li>ingredient</li>
-                <li>ingredient</li>
+                {% for i in 2_ingredients %}
+                <li>{{ i }}</li>
+                {% endfor %}
             </ol>
-            <a href=""><button type="button">More Info</button></a>
+            <a href="{{ 2_info }}"><button type="button">More Info</button></a>
         </div>
         <div class="card button2">
-            <h2>Recipe name</h2>
-            <img src="//www.html.am/images/html-codes/links/boracay-white-beach-sunset-300x225.jpg" width="90%"
-                alt="Photo of White Beach in Boracay, Philippines" />
+            <h2>{{ 3_name }}</h2>
+            <img src="{{ 3_image }}" width="90%"
+                 />
+            <h3>Ingredients:</h3>
             <h3>Ingredients:</h3>
             <ol>
-                <li>ingredient</li>
-                <li>ingredient</li>
-                <li>ingredient</li>
+                {% for i in 3_ingredients %}
+                <li>{{ i }}</li>
+                {% endfor %}
             </ol>
-            <a href=""><button type="button">More Info</button></a>
+            <a href="{{ 3_info }}"><button type="button">More Info</button></a>
         </div>
     </div>
     <div class="button">
