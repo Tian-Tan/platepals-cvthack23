@@ -57,27 +57,6 @@
       position: absolute;
     }
 
-    .bank {
-      margin: 30px;
-    }
-
-    .bank button {
-      margin: 5px;
-      background-color: rgb(221, 173, 128);
-      border: 2px solid black;
-      width: 15vw;
-      height: 3vw;
-      font-size: 1.5vw;
-      color: #000000;
-      border-radius: 0.5vw;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .bank button i {
-      float: right;
-    }
-
     nav {
       padding: 0px;
       position: fixed;
@@ -86,21 +65,12 @@
       z-index: 2;
     }
 
-    /* Style the search field */
-    form.search input[type=number] {
-      padding: 10px;
-      font-size: 17px;
-      border: 1px solid grey;
-      float: left;
-      width: 80%;
-      background: #f1f1f1;
-    }
-
-    /* Style the submit button */
-    form.search button {
-      float: left;
-      width: 20%;
-      padding: 10px;
+    button {
+      float: center;
+      width: 300px;
+      margin-left: 20px;
+      margin-right: 20px;
+      padding: 100px;
       background: rgb(221, 173, 128);
       color: white;
       font-size: 17px;
@@ -108,17 +78,6 @@
       border-left: none;
       /* Prevent double borders */
       cursor: pointer;
-    }
-
-    form.search button:hover {
-      background: rgb(213, 105, 4);
-    }
-
-    /* Clear floats */
-    form.search::after {
-      content: "";
-      clear: both;
-      display: table;
     }
   </style>
 </head>
@@ -159,23 +118,11 @@
     <h1>PLATEPALS</h1>
     <div>
       <h2>
-        Need help finding healthy food under a budget?
+        Feed the Need program
       </h2>
-      <h2>
-        No problem!
-      </h2>
-      <h2>
-        Let us recommend some recipes!
-      </h2>
-      <form class="search" action="/" method="post">
-        {% csrf_token %}
-        <input type="number" placeholder="Enter your budget" name="search">
-        <button type="submit" value="success">GO!</button>
-      </form>
-    </div>
-    <div class="bank">
-      <h3>Need more help? We can find you a food bank around Boston!</h2>
-        <button>-----></button>
+
+      <button type="submit" value="success">I wish to feed</button>
+      <button type="submit" value="success">I am in need</button>
     </div>
   </div>
 </body>

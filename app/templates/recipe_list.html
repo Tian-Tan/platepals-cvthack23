@@ -34,7 +34,7 @@
         .container {
             display: flex;
             justify-content: center;
-            align-items: center;
+            /* align-items: center; */
             flex-direction: row;
             width: 100%;
             margin-top: 20px;
@@ -156,7 +156,6 @@
             <img src="{{ 3_image }}" width="90%"
                  />
             <h3>Ingredients:</h3>
-            <h3>Ingredients:</h3>
             <ol>
                 {% for i in 3_ingredients %}
                 <li>{{ i }}</li>
@@ -166,7 +165,7 @@
         </div>
     </div>
     <div class="button">
-        <a href=""><button type="button">Get Another Recipe</button></a>
+        <button onClick="window.location.reload();">I want a different recommendation</button>
     </div>
 </body>
 
